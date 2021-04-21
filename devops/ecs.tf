@@ -1,7 +1,7 @@
 resource "aws_ecs_cluster" "main" {
   name = "jms-cluster"
 }
-data "aws_ecr_repository" "my-first-repo"{
+data "aws_ecr_repository" "my-first-repo" {
 name = "nodeproj"
 }
 data "template_file" "cb_app" {
