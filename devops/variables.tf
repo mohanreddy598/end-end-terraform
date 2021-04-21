@@ -1,6 +1,6 @@
 variable "aws_region" {
   description = "The AWS region things are created in"
-  default     = "ap-south-1"
+  default     = "us-east-2"
 }
 
 variable "ecs_task_execution_role_name" {
@@ -16,6 +16,11 @@ variable "ecs_auto_scale_role_name" {
 variable "az_count" {
   description = "Number of AZs to cover in a given region"
   default     = "2"
+}
+
+variable "app_image" {
+  description = "Docker image to run in the ECS cluster"
+  default     = "745979260988.dkr.ecr.us-east-2.amazonaws.com/my-first-repo"
 }
 
 variable "app_port" {
